@@ -24,11 +24,21 @@ var getResults = query.from('users as myTableAlias')
 writeDump(getResults);
 ```
 
+You can also use the `select` method to specify which columns you want to return. As with the `get` examples above, columns can be a single column, a list or columns \(comma-separated\), or an array of columns.
+
+```javascript
+var getResults = query.from('users')
+    .select('name as myAccountName, users.email,age')
+    .get();
+writeDump(getResults);
+```
+
 The `distinct` method allows you to force the query to return distinct results:
 
 ```javascript
 var getResults = query.from('users')
-    .distinct('email');
+    .distinct('email')
+    .get();
 writeDump(getResults);
 ```
 
