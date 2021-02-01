@@ -7,7 +7,7 @@
 | columns | string \| array | false |  | A shortcut parameter to retrieve only these columns overriding any columns previously set on the QueryBuilder. |
 | options | struct | false | `{}` | Any additional `queryExecute` options. |
 
-The `get` method is the most common method used for retrieving results. It executes using the configured `QueryBuilder` and returns the results.
+The `get` method is the most common method used for retrieving results. It executes using the configured `QueryBuilder` and returns the results as an array of structs.
 
 {% code title="QueryBuilder" %}
 ```javascript
