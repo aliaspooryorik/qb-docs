@@ -32,6 +32,8 @@ VALUES (?, ?, ?)
 ```
 {% endcode %}
 
+The `insert` method call returns the `result` object as you would normally get from a `queryExecute` call. This is useful when you want to known information about the insert, such as inserted key when using an auto generated primary key in your database.
+
 You can specify any [query param](../building-queries/parameters-and-bindings.md#custom-parameter-types) options such as the SQL type by passing a struct with the parameters you would pass to [`cfqueryparam`](https://cfdocs.org/cfqueryparam).
 
 {% code title="QueryBuilder" %}
